@@ -1,0 +1,240 @@
+*
+{
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    color: hsl(243, 100%, 93%);
+}
+
+body
+{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(229, 57%, 11%);
+    background-image: url(images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 1440px 47%;
+    background-position: bottom;
+}
+
+main
+{
+    flex-grow: 1;
+    display: grid;
+    place-items: center;
+}
+
+article
+{
+    display: flex;
+    gap: 25px;
+}
+
+.div__img-container, section
+{
+    background-color: hsl(228, 56%, 26%);
+    padding: 40px;
+}
+
+.div__img-container
+{
+    border-radius: 10px 100px 10px 10px;
+    width: 350px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.div__section-container
+{
+    display: flex;
+    height: 100%;
+    align-self: flex-end;
+}
+
+section
+{
+    border-radius: 15px;
+    width: 540px;
+    height: 155px;
+    position: relative;
+}
+/*Storage Bar*/
+.storage-bar
+{
+    width: 100%;
+    height: 20px;
+    background-color: hsl(229, 57%, 11%, 0.35);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    margin-top: 14px;
+    margin-bottom: 10px;
+}
+
+.storage-bar__progress
+{
+    width: 75%;
+    height: 100%;
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 2px;
+    animation: storageBar 1.5s;
+}
+
+.storage-bar-progress__point
+{
+    height: 100%;
+    width: 10px;
+    border-radius: 100%;
+    background-color: hsl(243, 100%, 93%);
+}
+/*Storage Bar*/
+.div__icon-container
+{
+    display: flex;
+    gap: 14px;
+    height: 60px;
+    align-items: center;
+}
+
+[alt="Logo"]
+{
+    width: 135px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.icon-img-background
+{
+    background-color: hsl(229, 57%, 11%);
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.icon-img-background:hover
+{
+    width: 53px;
+    height: 53px;
+}
+
+span
+{
+    font-weight: 700;
+}
+
+.storage-bar-data-container
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.storage-bar-data-container span
+{
+    font-size: 0.9em;
+}
+/*GB Left*/
+.div__gb-left-container
+{
+    background-color: hsl(243, 100%, 93%);
+    position: absolute;
+    height: 72px;
+    width: 178px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    top: -46px;
+    left: 326px;
+}
+
+.gb-left-container-decoration
+{
+    background-color: hsl(243, 100%, 93%);
+    width: 33px;
+    height: 33px;
+    clip-path: polygon(100% 100%, 0 0, 100% 0);
+    position: absolute;
+    top: 60px;
+    left: 145px;
+}
+
+.div__gb-left-container p
+{
+    color: hsla(229, 57%, 11%, 0.425);
+    font-weight: 700;
+}
+
+.div__gb-left-container span
+{
+    color: hsl(229, 57%, 11%);
+    font-size: 3em;
+}
+/*GB Left*/
+
+@media only screen and (max-width: 920px)
+{
+    body
+    {
+        background-image: url(images/bg-mobile.png);
+        background-repeat: no-repeat;
+        background-position: 50% 42%;
+        background-size: cover;
+    }
+
+    article
+    {
+        flex-direction: column;
+    }
+
+    section, .div__img-container
+    {
+        width: 320px;
+    }
+
+    .section__p
+    {
+        text-align: center;
+    }
+
+    .div__gb-left-container
+    {
+        top: 117px;
+        left: 72px;
+    }
+
+    .gb-left-container-decoration
+    {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 370px)
+{
+    body
+    {
+        background-size: initial;
+    }
+}
+
+@keyframes storageBar
+{
+    0% 
+    {
+        width: 0;
+    }
+    100% 
+    {
+        width: 75%;
+    }
+}
